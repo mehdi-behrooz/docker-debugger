@@ -16,6 +16,7 @@ services:
 
 ```
 
+And then:
 ```bash
     docker exec -it debugger /bin/bash
 ```
