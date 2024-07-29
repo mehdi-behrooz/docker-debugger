@@ -11,6 +11,6 @@ RUN apk add nmap                     # for: nmap
 RUN apk add curl                     # for: curl
 RUN apk add vim                      # for: vim
 
-
 CMD ["/bin/bash"]
 
+HEALTHCHECK CMD /bin/bash -c "" || exit 1
