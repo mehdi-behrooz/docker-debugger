@@ -13,4 +13,7 @@ RUN apk add vim                      # for: vim
 
 CMD ["/bin/bash"]
 
-HEALTHCHECK CMD /bin/bash -c "" || exit 1
+HEALTHCHECK  --interval=15m \
+    --start-interval=30s \
+    --start-period=30s \
+    CMD /bin/bash -c "" || exit 1
