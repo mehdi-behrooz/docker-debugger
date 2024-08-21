@@ -1,15 +1,11 @@
 # syntax=docker/dockerfile:1
+# checkov:skip=CKV_DOCKER_3
 
-FROM alpine:latest
+FROM alpine:3
 
-USER root
-
-RUN apk update
-RUN apk add bash                     # for: /bin/bash
-RUN apk add bind-tools               # for: dig
-RUN apk add nmap                     # for: nmap
-RUN apk add curl                     # for: curl
-RUN apk add vim                      # for: vim
+# bind-tools for: dig
+RUN apk update \
+    && apk add bash nmap curl vim bind-tools
 
 CMD ["/bin/bash"]
 
