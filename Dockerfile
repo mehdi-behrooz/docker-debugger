@@ -7,9 +7,11 @@ FROM alpine:3
 RUN apk update \
     && apk add bash nmap curl vim bind-tools
 
-CMD ["/bin/bash"]
+COPY entrypoint.sh /usr/bin/entrypoint.sh
+
+ENTRYPOINT ["/usr/bin/entrypoint.sh"]
 
 HEALTHCHECK  --interval=15m \
     --start-interval=30s \
     --start-period=30s \
-    CMD /bin/bash -c "" || exit 1
+    CMD pgrep sleep || exit 1

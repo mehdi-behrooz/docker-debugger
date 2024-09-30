@@ -11,8 +11,6 @@ services:
   debugger:
     container_name: debugger
     image: ghcr.io/mehdi-behrooz/docker-debugger
-    stdin_open: true
-    tty: true
 ```
 
 And then:
