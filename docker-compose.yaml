@@ -2,5 +2,3 @@ services:
   debugger:
     build: .
     container_name: debugger
-    stdin_open: true
-    tty: true
