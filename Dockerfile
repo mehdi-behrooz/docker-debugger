@@ -12,6 +12,6 @@ COPY entrypoint.sh /usr/bin/entrypoint.sh
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]
 
 HEALTHCHECK  --interval=15m \
-    --start-interval=30s \
+    --start-interval=10s \
     --start-period=30s \
     CMD pgrep sleep || exit 1
