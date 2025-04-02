@@ -4,8 +4,9 @@
 FROM alpine:3
 
 # bind-tools for: dig
+# inetutils-telnet for: telnet
 RUN apk update \
-    && apk add bash nmap curl vim bind-tools
+    && apk add bash nmap curl vim bind-tools inetutils-telnet jq
 
 COPY entrypoint.sh /usr/bin/entrypoint.sh
 
