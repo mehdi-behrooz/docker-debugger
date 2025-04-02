@@ -1,4 +1,4 @@
 services:
-  debugger:
+  test-debugger:
     build: .
-    container_name: debugger
+    container_name: test-debugger
