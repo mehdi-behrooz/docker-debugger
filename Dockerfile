@@ -12,6 +12,8 @@ COPY entrypoint.sh /usr/bin/entrypoint.sh
 
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]
 
+WORKDIR /root/
+
 HEALTHCHECK  --interval=15m \
     --start-interval=10s \
     --start-period=30s \
